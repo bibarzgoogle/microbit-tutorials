@@ -39,7 +39,8 @@ Note that the following solution is NOT correct:
 input.onButtonPressed(Button.A, function () {
    basic.showString("Hello")
    basic.showString("Bye")
-})```
+})
+```
 
 This shows one message after the other whenever we press the button. The program does the same thing every time. But we want it to do one thing the first time we press it, and a different thing the second.
 
@@ -90,7 +91,7 @@ Well, *something* has happened, but we can't see it.  By creating a variable, we
 
 #### Let's recap for a moment what we know about variables:
 - A variable is a space in the memory of the microbit. We can think of it as a box.
-- A variable has a **name**. The name is like something we write on the outside of the box to remember what the box is for (for example, 'buiscuits', or 'toys'). The name of a variable can be almost anything, the microbit doesn't care. We've called our variable `counter` but we could just as well have called it `jabberwocky`, and everything would work just the same (try it!).
+- A variable has a **name**. The name is like something we write on the outside of the box to remember what the box is for (for example, 'biscuits', or 'toys'). The name of a variable can be almost anything, the microbit doesn't care. We've called our variable `counter` but we could just as well have called it `jabberwocky`, and everything would work just the same (try it!).
 - A variable has a **value**. This is the important thing, the content of the box. Unlike a real box, that can contain all sorts of stuff, our variables will always contain **a number**. Remember that, after all, everything is a number for the computer.
 ### ~
 
@@ -189,6 +190,7 @@ Let's go back to this program, which we will call program 1:
 ```blocks
 let counter = 0
 counter = 0
+basic.showNumber(counter)
 input.onButtonPressed(Button.A, function () {
    basic.showNumber(counter)
    // @highlight
@@ -199,6 +201,7 @@ Now change the ``||variables:set||`` block for a ``||variables:change||`` block:
 ```blocks
 let counter = 0
 counter = 0
+basic.showNumber(counter)
 input.onButtonPressed(Button.A, function () {
    basic.showNumber(counter)
    // @highlight
