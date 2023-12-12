@@ -6,4 +6,4 @@ theme: jekyll-theme-slate
 include:
   - assets
   - README.md
-repository: bibarzgoogle/v2-pet-hamster
+repository: bibarzgoogle/microbit-tutorials
