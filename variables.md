@@ -3,7 +3,7 @@
 # Using variables
 
 
-## A simple task.
+## 1. A simple task.
 
 
 Let's start with a simple task:
@@ -23,7 +23,7 @@ input.onButtonPressed(Button.B, function () {
 ```
 
 
-## An impossible task.
+## 2. An impossible task.
 
 
 Let's change the task a little bit:
@@ -48,7 +48,7 @@ This shows one message after the other whenever we press the button. The program
 Spend a bit of time trying to find a solution. How can we do this?
 
 
-## Variables
+## 3. Variables
 
 
 The answer is: we can't! Unless we use the microbit's memory. The microbit does not remember how many times you have pressed the button. Every time is like the first time.
@@ -78,7 +78,7 @@ let counter = 0
 Run your program. What happens?
 
 
-## Displaying variables.
+## 4. Displaying variables.
 
 
 Apparently nothing happens!
@@ -116,7 +116,7 @@ input.onButtonPressed(Button.A, function () {
 Can you spot the difference between the two programs? Look closely! For the moment, both programs seem to do the same thing. One is showing the number 0. The other is showing the **value of the** `counter` **variable**, which also happens to be 0. To do more interesting things, we need to *modify* the **value** of our variable.
 
 
-## Modifying variables (1).
+## 5. Modifying variables (1).
 
 
 Acutally, we have already learned to modify the value of a variable!
@@ -180,7 +180,7 @@ Answer the same questions, and then run the program and check your answers:
 - What will happen when you press button `A` again?
 
 
-## Modifying variables (2).
+## 6. Modifying variables (2).
 
 
 There is another way of modifying variables in microbit: the ``||variables:change||`` block.
@@ -252,7 +252,7 @@ input.onButtonPressed(Button.A, function () {
 ```
 
 
-## A counting game.
+## 7. A counting game.
 
 
 Now let's play a game.
@@ -276,7 +276,7 @@ Good luck!
 
 
 
-## Advanced: Back to the impossible task.
+## 8. Advanced: Back to the impossible task.
 
 
 Remember the "impossible" task from the beginning?
