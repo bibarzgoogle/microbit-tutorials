@@ -1,4 +1,3 @@
-repository: bibarzgoogle/v2-pet-hamster
 makecode:
   target: microbit
   platform: microbit
@@ -7,3 +6,4 @@ theme: jekyll-theme-slate
 include:
   - assets
   - README.md
+repository: bibarzgoogle/v2-pet-hamster
