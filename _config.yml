@@ -5,5 +5,5 @@ makecode:
 theme: jekyll-theme-slate
 include:
   - assets
-  - README.md
+  - variables.md
 repository: bibarzgoogle/microbit-tutorials
