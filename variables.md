@@ -7,7 +7,7 @@
 
 
 Let's start with a simple task:
-- When you press button `A`, show the message "Hello".
+- When you press button `A`, show the message "Hi".
 - When you press button `B`, show the message "Bye".
 
 
@@ -15,7 +15,7 @@ Let's start with a simple task:
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
-   basic.showString("Hello")
+   basic.showString("Hi")
 })
 input.onButtonPressed(Button.B, function () {
    basic.showString("Bye")
@@ -27,7 +27,7 @@ input.onButtonPressed(Button.B, function () {
 
 
 Let's change the task a little bit:
-- When you press button `A` the first time after reset, show the message "Hello".
+- When you press button `A` the first time after reset, show the message "Hi".
 - When you press button `A` a second time, show the message "Bye".
 
 
@@ -37,7 +37,7 @@ Note that we are not involving button `B` at all this time.
 Note that the following solution is NOT correct:
 ```blocks
 input.onButtonPressed(Button.A, function () {
-   basic.showString("Hello")
+   basic.showString("Hi")
    basic.showString("Bye")
 })
 ```
@@ -280,7 +280,7 @@ Good luck!
 
 
 Remember the "impossible" task from the beginning?
-- When you press button `A` the first time after reset, show the message "Hello".
+- When you press button `A` the first time after reset, show the message "Hi".
 - When you press button `A` a second time, show the message "Bye".
 
 
@@ -289,7 +289,7 @@ Can you do it now? You want to do different things depending on how many times y
 let counter = 0
 counter = 0
 input.onButtonPressed(Button.A, function () {
-   basic.showString("Hello")
+   basic.showString("Hi")
    counter = 1
 })
 ```
@@ -297,7 +297,7 @@ Try it out.
 
 This is not what we want! This always shows the same text!
 
-We want to show different texts *depending on the value* of the variable. When the variable is 0 (the first time) we want to show "Hello". When the variable is 1, we want to show "Bye".
+We want to show different texts *depending on the value* of the variable. When the variable is 0 (the first time) we want to show "Hi". When the variable is 1, we want to show "Bye".
 
 
 That's where a new block comes in handy: the ``||logic:if - else||`` block, in the ``||logic:Logic||`` category.
@@ -307,7 +307,7 @@ Try putting together this program:
 ```blocks
 input.onButtonPressed(Button.A, function () {
    if (counter == 0) {
-       basic.showString("Hello!")
+       basic.showString("Hi!")
        counter += 1
    } else {
        basic.showString("Bye")
@@ -318,12 +318,12 @@ counter = 0
 ```
 
 The ``||logic:if - else||`` block tells the microbit to do different things depending on whether the value of `counter` is 0 or something else:
-- If `counter`=0, we show "Hello" *and change `counter` to 1*.
+- If `counter`=0, we show "Hi" *and change `counter` to 1*.
 - In any other case (that's what the ``||logic:else||`` part means), show "Bye".
 
 Challenges:
-- Can you modify the program so that it alternates printing "Hello" and "Bye" every time you press `A`?
-- (Harder) Can you modify the program so that the first time it shows "Hello", the second time "How are you?" and the third time "Bye"?
+- Can you modify the program so that it alternates printing "Hi" and "Bye" every time you press `A`?
+- (Harder) Can you modify the program so that the first time it shows "Hi", the second time "How are you?" and the third time "Bye"?
 
 
 
