@@ -7,10 +7,12 @@
 
 
 Let's start with a simple task:
+
 - When you press button `A`, show the message "Hi".
 - When you press button `B`, show the message "Bye".
 
 
+Remember the button `A` or `B` block is in the ``||input:Input||`` menu.
 
 
 ```blocks
@@ -323,7 +325,7 @@ The ``||logic:if - else||`` block tells the microbit to do different things depe
 
 Challenges:
 - Can you modify the program so that it alternates printing "Hi" and "Bye" every time you press `A`?
-- (Harder) Can you modify the program so that the first time it shows "Hi", the second time "How are you?" and the third time "Bye"?
+- (Harder) Can you modify the program so that the first time it shows "Hi", the second time "Howdy?" and the third time "Bye"?
 
 
 
