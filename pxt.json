@@ -1,0 +1,35 @@
+{
+    "name": "microbit-tutorials",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        "variables/.vscode/extensions.json",
+        "variables/.vscode/settings.json",
+        "variables/README.md",
+        "variables/main.blocks",
+        "variables/main.ts",
+        "variables/pxt.json",
+        "variables/test.ts",
+        "variables/tsconfig.json",
+        "variables_quiz/.vscode/extensions.json",
+        "variables_quiz/.vscode/settings.json",
+        "variables_quiz/README.md",
+        "variables_quiz/main.blocks",
+        "variables_quiz/main.ts",
+        "variables_quiz/pxt.json",
+        "variables_quiz/test.ts",
+        "variables_quiz/tsconfig.json"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "target": "6.0.25",
+        "targetId": "microbit"
+    },
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "blocksprj"
+}
