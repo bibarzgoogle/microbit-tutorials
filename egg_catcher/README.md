@@ -40,7 +40,7 @@ We add a conditional block to make sure that we only move left if we are not at 
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
-   if (basket > 0) {
+   if (basketX > 0) {
       led.unplot(basketX, basketY)
       basketX = basketX - 1
       led.plot(basketX, basketY)
