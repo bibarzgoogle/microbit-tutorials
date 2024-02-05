@@ -1,123 +1,67 @@
 ### @hideIteration true
 ### @explicitHints true
-# Using variables
+# Egg catcher
 
 
-## 1. A simple task.
+## 1. Set up the necessary variables and plot the basket at the start.
 
-
-Let's start with a simple task:
-- When you press button `A`, show the message "Hi".
-- When you press button `B`, show the message "Bye".
-
-
-Remember the button `A` or `B` block is in the ``||input:Input||`` menu.
 
 
 ```blocks
+basket_x = 2
+basket_y = 2
+led.plot(basket_x, basket_y)
+```
+
+
+## 2. When we press button A, the basket should move left.
+
+Notice that "moving" consists of:
+- Unplotting at the current position.
+- Updating the position.
+- Plotting at the new position.
+
+```blocks
 input.onButtonPressed(Button.A, function () {
-   basic.showString("Hi")
+   led.unplot(basket_x, basket_y)
+   basket_x = basket_x - 1
+   led.plot(basket_x, basket_y)
 })
+```
+
+Try it out! What happens when we go too far to the left?
+
+
+
+
+## 3. Preventing the basket from going out of the screen.
+
+We add a conditional block to make sure that we only move left if we are not at the edge of the screen.
+
+```blocks
+input.onButtonPressed(Button.A, function () {
+   if (basket > 0) {
+      led.unplot(basket_x, basket_y)
+      basket_x = basket_x - 1
+      led.plot(basket_x, basket_y)
+   }
+})
+```
+
+Check it out: the basket should not go out of the screen anymore.
+
+
+## 4. Now you go ahead do the same for button B moving the basket to the right.
+
+```blocks
 input.onButtonPressed(Button.B, function () {
-   basic.showString("Bye")
 })
 ```
 
-
-## 2. An impossible task.
-
-
-Let's change the task a little bit:
-- When you press button `A` the first time after reset, show the message "Hi".
-- When you press button `A` a second time, show the message "Bye".
-
-
-Note that we are not involving button `B` at all this time.
-
-
-Note that the following solution is NOT correct:
-```blocks
-input.onButtonPressed(Button.A, function () {
-   basic.showString("Hi")
-   basic.showString("Bye")
-})
-```
-
-
-This shows one message after the other whenever we press the button. The program does the same thing every time. But we want it to do one thing the first time we press it, and a different thing the second.
-
-
-Spend a bit of time trying to find a solution. How can we do this?
-
-
-## 3. Variables
-
-
-The answer is: we can't! Unless we use the microbit's memory. The microbit does not remember how many times you have pressed the button. Every time is like the first time.
-
-
-You need to use the memory of the microbit to remember that the button has already been pressed.
-
-
-To use the memory of the microbit we need **variables**.
-
-
-A variable is a little space in the memory of the microbit that we can manipulate. You can think of it as a box. You can put something in the box, and later come back and look at the content of the box. Most importantly, you can tell the microbit to change the content of the box, and do different things depending on the content of the box.
-
-
-Let's create a variable.
-- Delete all the blocks you have created so far.
-- Go to the ``||variables:Variables||`` category and click the ``|control:Make a Variable|`` button.
-- You have to give the variable a **name**. Let's call it `counter`.
-- We have to set the **value** of the variable when we start the microbit, using the ``||variables:set||`` block. Let's give it the value 0.
-
-
-```blocks
-counter = 0
-```
-
-
-Run your program. What happens?
-
-
-## 4. Displaying variables.
-
-
-Apparently nothing happens!
-
-
-Well, *something* has happened, but we can't see it.  By creating a variable, we have modified the memory of the microbit. But the microbit doesn't show what goes on in its memory.
-
-
-### ~reminder
-
-
-#### Let's recap for a moment what we know about variables:
-- A variable is a space in the memory of the microbit. We can think of it as a box.
-- A variable has a **name**. The name is like something we write on the outside of the box to remember what the box is for (for example, 'biscuits', or 'toys'). The name of a variable can be almost anything, the microbit doesn't care. We've called our variable `counter` but we could just as well have called it `jabberwocky`, and everything would work just the same (try it!).
-- A variable has a **value**. This is the important thing, the content of the box. Unlike a real box, that can contain all sorts of stuff, our variables will always contain **a number**. Remember that, after all, everything is a number for the computer.
-### ~
-
-
-Let's show the **value** of the `counter` variable on the screen of the microbit when we press button `A`. Since the value is a number, we have to use the ``||basic:show number||`` block in the ``||basic:Basic||`` category. But instead of showing a fixed number, like so:
-
-```blocks
-counter = 0
-input.onButtonPressed(Button.A, function () {
-   basic.showNumber(0)
-})
-```
-we will show the value of our `counter` variable (find it in the ``||variables:Variables||`` category, in a circle, and drag it into the ``||basic:show number||`` block):
-
-```blocks
-counter = 0
-input.onButtonPressed(Button.A, function () {
-   // @highlight
-   basic.showNumber(counter)
-})
-```
-
-Can you spot the difference between the two programs? Look closely! For the moment, both programs seem to do the same thing. One is showing the number 0. The other is showing the **value of the** `counter` **variable**, which also happens to be 0. To do more interesting things, we need to *modify* the **value** of our variable.
+Hints:
+- Copy the Button A block.
+- The basket_x variable has to increase, not decrease, to go to the right.
+- To prevent the basket from going out of the screen: what is the x coordinate of the rightmost LED? You want to allow movement as long as basket_x is *less* than that.
 
 
 ## 5. Modifying variables (1).
