@@ -108,4 +108,5 @@ basic.forever(function () {
 
 ## 8. Challenges:
 - Add a score variable that increases for each egg you catch. When the egg falls, display the score and set it back to zero.
+- How can you control the speed of the falling egg? Can you make it so that each egg falls at a different speed?
 - (Harder) Add a proper start and end screen: before the game starts, display a title and wait for a button press. When the game ends, display the score and wait for a button press to start again. You will probably need additional variables.
