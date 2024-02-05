@@ -1,5 +1,5 @@
 {
-    "name": "microbit-tutorials-variables",
+    "name": "microbit-tutorials-egg_catcher",
     "dependencies": {
         "core": "*",
         "radio": "*",
