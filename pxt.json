@@ -19,7 +19,7 @@
         "variables_quiz/main.ts",
         "variables_quiz/pxt.json",
         "variables_quiz/test.ts",
-        "variables_quiz/tsconfig.json"
+        "variables_quiz/tsconfig.json",
         "egg_catcher/.vscode/extensions.json",
         "egg_catcher/.vscode/settings.json",
         "egg_catcher/README.md",
