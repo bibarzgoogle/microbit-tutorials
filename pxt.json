@@ -20,6 +20,14 @@
         "variables_quiz/pxt.json",
         "variables_quiz/test.ts",
         "variables_quiz/tsconfig.json"
+        "egg_catcher/.vscode/extensions.json",
+        "egg_catcher/.vscode/settings.json",
+        "egg_catcher/README.md",
+        "egg_catcher/main.blocks",
+        "egg_catcher/main.ts",
+        "egg_catcher/pxt.json",
+        "egg_catcher/test.ts",
+        "egg_catcher/tsconfig.json"
     ],
     "testFiles": [
         "test.ts"
