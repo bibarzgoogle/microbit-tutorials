@@ -6,9 +6,11 @@
 ## 1. Learn how the coordinates of the microbit LEDs work
 
 The microbit "screen" is made up of 25 small lights (called LEDs) arranged in 5 rows and 5 columns.
+
 Each LED is identified by two numbers, called *coordinates*: a horizontal coordinate and a vertical coordinate.
 - The horizontal coordinate can go from 0 (all the way to the left) to 4 (all the way to the right).
 - The vertical coordinate can go from 0 (all the way at the top) to 4 (all the way at the bottom).
+
 You can see the coordinates of each LED in the microbit emulator by hovering the mouse above the different LEDs.
 
 The horizontal coordinate is usually called *x*. The vertical coordinate is usually called *y*.
@@ -46,7 +48,7 @@ Have you done it? Here's the solution:
 
 ```blocks
 led.plot(2, 0)
-pause(500)
+basic.pause(500)
 led.unplot(2,0)
 led.plot(2, 1)
 ```
@@ -61,19 +63,19 @@ Let's continue the animation all the way down the screen:
 
 ```blocks
 led.plot(2, 0)
-pause(500)
+basic.pause(500)
 led.unplot(2,0)
 led.plot(2, 1)
-pause(500)
+basic.pause(500)
 led.unplot(2,1)
 led.plot(2, 2)
-pause(500)
+basic.pause(500)
 led.unplot(2,2)
 led.plot(2, 3)
-pause(500)
+basic.pause(500)
 led.unplot(2,3)
 led.plot(2, 4)
-pause(500)
+basic.pause(500)
 led.unplot(2,4)
 ```
 
@@ -91,19 +93,19 @@ We can make changes more easily with a variable:
 ```blocks
 snowX = 2
 led.plot(snowX, 0)
-pause(500)
+basic.pause(500)
 led.unplot(snowX,0)
 led.plot(snowX, 1)
-pause(500)
+basic.pause(500)
 led.unplot(snowX,1)
 led.plot(snowX, 2)
-pause(500)
+basic.pause(500)
 led.unplot(snowX,2)
 led.plot(snowX, 3)
-pause(500)
+basic.pause(500)
 led.unplot(snowX,3)
 led.plot(snowX, 4)
-pause(500)
+basic.pause(500)
 led.unplot(snowX,4)
 ```
 
@@ -116,7 +118,7 @@ Now if you want to change the position of the snowflake, you just have to change
 
 Up to now our snowflake falls only once.
 
-Put the animation in a ``||basic::forever||`` block instead of the ``||basic::onstart||``block, so that it falls repeatedly.
+Put the animation in a ``||basic:forever||`` block instead of the ``||basic:onstart||``block, so that it falls repeatedly.
 
 
 ## 6. Snow that falls everywhere.
@@ -129,19 +131,19 @@ Let's assign a random value between 0 and 4 to `snowX` each time so that it will
 basic.forever(function () {
     snowX = randint(0, 4)
     led.plot(snowX, 0)
-    pause(500)
+    basic.pause(500)
     led.unplot(snowX,0)
     led.plot(snowX, 1)
-    pause(500)
+    basic.pause(500)
     led.unplot(snowX,1)
     led.plot(snowX, 2)
-    pause(500)
+    basic.pause(500)
     led.unplot(snowX,2)
     led.plot(snowX, 3)
-    pause(500)
+    basic.pause(500)
     led.unplot(snowX,3)
     led.plot(snowX, 4)
-    pause(500)
+    basic.pause(500)
     led.unplot(snowX,4)
 })
 ```

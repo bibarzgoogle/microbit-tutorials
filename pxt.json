@@ -27,7 +27,15 @@
         "egg_catcher/main.ts",
         "egg_catcher/pxt.json",
         "egg_catcher/test.ts",
-        "egg_catcher/tsconfig.json"
+        "egg_catcher/tsconfig.json",
+        "snowfall/.vscode/extensions.json",
+        "snowfall/.vscode/settings.json",
+        "snowfall/README.md",
+        "snowfall/main.blocks",
+        "snowfall/main.ts",
+        "snowfall/pxt.json",
+        "snowfall/test.ts",
+        "snowfall/tsconfig.json"
     ],
     "testFiles": [
         "test.ts"
