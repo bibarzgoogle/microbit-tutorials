@@ -127,7 +127,7 @@ A snowflake that always falls in the same place is boring.
 
 Let's assign a random value between 0 and 4 to `snowX` each time so that it will fall in a different place each time:
 
-```blocks
+```block
 basic.forever(function () {
     snowX = randint(0, 4)
     led.plot(snowX, 0)
